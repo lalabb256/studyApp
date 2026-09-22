@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --page-bg: #f5f7fb;
+    --panel-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(148, 163, 184, 0.2);
+    --card-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.10), transparent 20%),
+        linear-gradient(180deg, #f8fafc 0%, #eef6ff 100%);
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+html.dark body {
+    background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.10), transparent 20%),
+        linear-gradient(180deg, #020817 0%, #0f172a 100%);
+}
+
+header {
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+#timer-display {
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 12px rgba(2, 132, 199, 0.12);
+}
+
+button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.tab-btn {
+    position: relative;
+    border-radius: 0.9rem 0.9rem 0 0;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: rgba(14, 165, 233, 0.06);
+    box-shadow: inset 0 -2px 0 rgba(2, 132, 199, 0.7);
+}
+
+#tab-content-area > .tab-view {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ambient-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+html.dark .ambient-card {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+}
+
+.sound-range {
+    filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.15));
+}
+
+#settings-modal .bg-white,
+#settings-modal .dark\:bg-slate-800 {
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.28);
+}
+
+#flashcard-answer {
+    box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.18);
+}
+
+#mistake-list > div {
+    transition: background-color 0.2s ease;
+}
+
+#mistake-list > div:hover {
+    background: rgba(148, 163, 184, 0.04);
+    border-radius: 0.75rem;
+}
